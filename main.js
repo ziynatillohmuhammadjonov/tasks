@@ -101,23 +101,85 @@ let sonSumm = [
   ["s", "a", "l", "o", "m"],
   5,
 ];
+console.log(sonSumm);
 let yigindi = 0;
 let ichyigindi = 0;
-console.log(sonSumm.length);
 for (i = 0; i < sonSumm.length; i++) {
-  console.log(typeof sonSumm[i]);
   if (typeof sonSumm[i] == "number") {
     yigindi += sonSumm[i];
   } else {
   }
   if (typeof sonSumm[i] == "object") {
-    console.log("salom");
-    if (typeof sonSumm[i] == "number") {
-      console.log(sonSumm[i]);
-      for (k = 0; k < sonSumm[k].length; k++) {
-        yigindi += parseInt(sonSumm[k]);
+    for (k = 0; k < sonSumm[i].length; k++) {
+      if (typeof sonSumm[i][k] == "number") {
+        ichyigindi += sonSumm[i][k];
       }
     }
   }
 }
 console.log("Raqamlar yig'indisi:" + yigindi);
+console.log(`Ich raqamlar yig'insi: ${ichyigindi}`);
+console.log(`Jami raqamlar yig'indisi: ` + (yigindi + ichyigindi));
+
+// 8-topshiriq:
+
+console.log(`8-topshiriq`);
+let xisoblagich = 0;
+let str = prompt("8-topshiriq matinini kiriting: ");
+for (i = 0; i < str.length; i++) {
+  if (str.charAt(i) == "a") {
+    xisoblagich += 1;
+  }
+}
+
+console.log('Berilgan matn tarkibidagi "a" lar soni: ' + xisoblagich);
+
+//9-topshiriq
+
+console.log("9-topshiriq");
+let typeArray = [21.1, "Roziya", "array", ["I am array"], null, true, 214];
+let newTypeArray = [];
+for (i = 0; i < typeArray.length; i++) {
+  newTypeArray.push(typeof typeArray[i]);
+}
+console.log(newTypeArray);
+
+// 10-topshiriq
+
+console.log("10-topshiriq");
+let text = `Najot ta'lim`;
+let textTrim = text.trim();
+let textLenght = 0;
+for (i = 0; i < textTrim.length; i++) {
+  textLenght++;
+}
+console.log(textLenght);
+
+//11-topshiriq:
+
+console.log("11-topshiriq");
+let indexArray = [1, 2, 3, 4, 5];
+for (i = 0; i < indexArray.length; i++) {
+  indexArray[i] += i;
+}
+console.log(indexArray);
+
+// 12-topshiriq
+
+console.log("12-topshiriq");
+let son = 99;
+let sonYigindi = 0;
+for (i = 0; i <= 99; i++) {
+  sonYigindi += i;
+}
+console.log(sonYigindi);
+
+// 13-topshiriq
+
+console.log("13-topshiriq");
+let nSon = 2;
+let berilganSon = 8;
+for (i = 0; i <= 10; i++) {
+  berilganSon = berilganSon * 2 + 1;
+  console.log(berilganSon);
+}
