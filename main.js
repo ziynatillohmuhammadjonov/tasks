@@ -78,16 +78,16 @@ let massiv = qiymat5.split("");
 console.log("Natija: " + massiv.reverse().join(""));
 
 // 6-topshiriq
-// console.log("6-topshiriq");
-// let matn = prompt("6-topshiriq matnini kriting: ");
-// let matnMassiv = matn.split(" ");
-// for (i = 0; i < matnMassiv.length; i++) {
-//   let vString = matnMassiv[i].toString();
-//   let bosh = vString.charAt().toLowerCase();
-//   let bir = vString.slice(1, vString.length).toUpperCase();
-//   matnMassiv[i] = bosh.concat(bir).split();
-// }
-// console.log(matnMassiv);
+console.log("6-topshiriq");
+let matn = prompt("6-topshiriq matnini kriting: ");
+let matnMassiv = matn.split(" ");
+for (i = 0; i < matnMassiv.length; i++) {
+  let vString = matnMassiv[i].toString();
+  let bosh = vString.charAt().toLowerCase();
+  let bir = vString.slice(1, vString.length).toUpperCase();
+  matnMassiv[i] = bosh.concat(bir).split();
+}
+console.log(matnMassiv);
 
 //7-topshiriq
 
@@ -180,6 +180,7 @@ console.log("13-topshiriq");
 let nSon = 2;
 let berilganSon = 8;
 for (i = 0; i <= 10; i++) {
-  berilganSon = berilganSon * 2 + 1;
-  console.log(berilganSon);
+  console.log(
+    ` ${berilganSon} * 2 + 1 = ${(berilganSon = berilganSon * 2 + 1)}`
+  );
 }
